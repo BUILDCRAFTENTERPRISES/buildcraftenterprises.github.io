@@ -2,277 +2,564 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BUILDCRAFT ENTERPRISES | Premium Interior Design Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUILDCRAFT ENTERPRISES | Premium Interior Design & Custom Sofas</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Basic SEO -->
+  <meta name="description"
+    content="Buildcraft Enterprises - Premium interior designing, modular kitchens, wardrobes, custom sofas, TV units, false ceilings and complete renovation in Pune.">
+  <meta name="keywords"
+    content="interior designer pune, custom sofa pune, modular kitchen pune, bedroom design, living room, false ceiling, renovation work, Buildcraft Enterprises">
+  <meta name="author" content="BUILDCRAFT ENTERPRISES" />
 
-    <style>
-        :root {
-            --primary: #ff7b61;
-            --secondary: #6c63ff;
-            --dark: #1a1a1a;
-            --light: #ffffff;
-            --bg: #f7f7f7;
-            --glass-bg: rgba(255, 255, 255, 0.2);
-            --blur: 15px;
-        }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <style>
+    :root {
+      --primary: #ff7b61;
+      --secondary: #6c63ff;
+      --dark: #181818;
+      --light: #ffffff;
+      --bg: #f6f6f6;
+      --glass-bg: rgba(255, 255, 255, 0.18);
+      --blur: 18px;
+    }
 
-        body {
-            background: var(--bg);
-            color: var(--dark);
-            overflow-x: hidden;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-        /* HEADER */
-        header {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            padding: 20px 30px;
-            color: white;
-            text-align: center;
-            font-size: 26px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 15px;
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: 0.3s;
-        }
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      padding: 18px 20px;
+      color: white;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
 
-        nav a:hover {
-            color: var(--primary);
-        }
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 12px 10px 18px;
+      background: #ffffffdd;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 60px;
+      z-index: 19;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
 
-        /* HERO SECTION */
-        .hero {
-            height: 65vh;
-            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=60') no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center;
-        }
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 15px;
+      position: relative;
+    }
 
-        .hero-text {
-            background: var(--glass-bg);
-            padding: 25px 40px;
-            border-radius: 16px;
-            backdrop-filter: blur(var(--blur));
-            color: white;
-            font-size: 32px;
-            font-weight: 600;
-            animation: fadeIn 1.4s ease;
-        }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.25s ease;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    nav a:hover::after {
+      width: 100%;
+    }
 
-        /* SECTIONS */
-        section {
-            padding: 60px 8%;
-        }
+    /* HERO SECTION */
+    .hero {
+      min-height: 60vh;
+      background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=70") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 15px;
+    }
 
-        h2.section-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 40px;
-        }
+    .hero-text {
+      max-width: 700px;
+      background: var(--glass-bg);
+      border-radius: 20px;
+      padding: 28px 40px 26px;
+      backdrop-filter: blur(var(--blur));
+      color: #fff;
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    }
 
-        /* SERVICES */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
-        }
+    .hero-text h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
 
-        .service-card {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-            cursor: pointer;
-        }
+    .hero-text p {
+      font-size: 15px;
+      opacity: 0.9;
+    }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-        }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
 
-        /* GALLERY */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .gallery img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 14px;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
+    /* GENERIC SECTION */
+    section {
+      padding: 60px 8%;
+    }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+    h2.section-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-        /* CONTACT */
-        .contact-box {
-            max-width: 650px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
+    .section-subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 35px;
+    }
 
-        .contact-box input,
-        .contact-box textarea {
-            width: 100%;
-            padding: 14px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            font-size: 15px;
-        }
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
 
-        .btn {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            padding: 14px 25px;
-            color: white;
-            font-weight: 600;
-            border-radius: 12px;
-            display: block;
-            width: 100%;
-            text-align: center;
-            margin-top: 15px;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .service-card {
+      background: #fff;
+      padding: 22px 18px;
+      border-radius: 18px;
+      text-align: left;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
 
-        .btn:hover {
-            opacity: 0.85;
-        }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at center, var(--primary), transparent 60%);
+      opacity: 0;
+      transition: 0.3s;
+    }
 
-        footer {
-            text-align: center;
-            padding: 18px;
-            margin-top: 40px;
-            background: #eee;
-        }
-    </style>
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 10px 14px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .contact-card a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 13px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border: none;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 6px;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #777;
+      margin-top: 8px;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 22px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      cursor: pointer;
+      animation: floatIn 0.7s ease-out;
+    }
+
+    .whatsapp-float img {
+      width: 28px;
+      height: 28px;
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      margin-top: 40px;
+      background: #ececec;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-text {
+        padding: 22px 18px;
+      }
+
+      .hero-text h1 {
+        font-size: 24px;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 25px;
+        top: 58px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 22px;
+      }
+
+      section {
+        padding: 45px 6%;
+      }
+
+      .gallery-item img {
+        height: 210px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>BUILDCRAFT ENTERPRISES</header>
+  <!-- HEADER & NAV -->
+  <header>BUILDCRAFT ENTERPRISES</header>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <div class="hero">
-        <div class="hero-text">
-            Premium Interior Design & Custom Furniture Studio
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Premium Interiors & Custom Sofas in Pune</h1>
+      <p>
+        From concept to completion – BUILDCRAFT ENTERPRISES designs stylish,
+        functional homes with modular kitchens, wardrobes, bespoke sofas and
+        complete renovation solutions.
+      </p>
     </div>
+  </section>
 
-    <!-- SERVICES -->
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">
+      End-to-end residential interior solutions – design, manufacturing & on-site execution.
+    </p>
 
-        <div class="services-grid">
-            <div class="service-card">Interior Designing</div>
-            <div class="service-card">Modular Kitchens</div>
-            <div class="service-card">Wardrobe & Bedroom Design</div>
-            <div class="service-card">Custom Sofa Manufacturing</div>
-            <div class="service-card">Living Room Design</div>
-            <div class="service-card">Kids Bedroom Design</div>
-            <div class="service-card">TV Unit Design</div>
-            <div class="service-card">False Ceiling</div>
-            <div class="service-card">Renovation Work</div>
-        </div>
-    </section>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Interior Designing</h3>
+        <p>Complete home interiors with space planning, mood boards, and 3D visuals tailored to your lifestyle.</p>
+      </div>
 
-    <!-- GALLERY -->
-    <section id="gallery">
-        <h2 class="section-title">Project Gallery</h2>
+      <div class="service-card">
+        <h3>Modular Kitchens</h3>
+        <p>Ergonomic and stylish modular kitchens with smart storage, durable materials and premium finishes.</p>
+      </div>
 
-        <div class="gallery">
-            <!-- Replace with your real images -->
-            <img src="img1.jpg">
-            <img src="img2.jpg">
-            <img src="img3.jpg">
-            <img src="img4.jpg">
-            <img src="img5.jpg">
-        </div>
-    </section>
+      <div class="service-card">
+        <h3>Wardrobe & Bedroom Design</h3>
+        <p>Sliding wardrobes, walk-in closets and cozy bedroom designs that keep everything organized.</p>
+      </div>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2 class="section-title">Contact Us</h2>
+      <div class="service-card">
+        <h3>Custom Sofa Manufacturing</h3>
+        <p>In-house crafted sofas with your choice of fabric, size and comfort – straight, L-shape, recliners & more.</p>
+      </div>
 
-        <div class="contact-box">
-            <p><strong>Office:</strong> Office No. 203, Konark Indravu Mall, Pune 411048</p>
-            <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/919673237661">+91 96732 37661</a></p>
-            <p><strong>Email:</strong> <a href="mailto:shaikhfaizan000@gmail.com">shaikhfaizan000@gmail.com</a></p>
+      <div class="service-card">
+        <h3>Living Room Design</h3>
+        <p>Elegant TV units, wall paneling, lighting and furniture layouts that make your living room impressive.</p>
+      </div>
 
-            <br>
+      <div class="service-card">
+        <h3>Kids Bedroom Design</h3>
+        <p>Playful yet practical designs with study units, storage and themes kids love.</p>
+      </div>
 
-            <input type="text" placeholder="Your Name *">
-            <input type="email" placeholder="Email *">
-            <input type="text" placeholder="Phone Number *">
-            <textarea rows="4" placeholder="Your Message *"></textarea>
+      <div class="service-card">
+        <h3>TV Unit Design</h3>
+        <p>Contemporary TV units with hidden wiring, storage and back lighting for a clean look.</p>
+      </div>
 
-            <button class="btn">Send Inquiry</button>
+      <div class="service-card">
+        <h3>False Ceiling</h3>
+        <p>Gypsum and POP ceilings with cove lights and spotlights to enhance the overall ambience.</p>
+      </div>
 
-            <p style="margin-top: 10px; font-size: 14px;">
-                For pricing details, please fill the inquiry form.
-            </p>
-        </div>
-    </section>
+      <div class="service-card">
+        <h3>Renovation Work</h3>
+        <p>Makeover of existing spaces – civil, carpentry, painting, electrical and finishing under one roof.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        © 2025 BUILDCRAFT ENTERPRISES • All Rights Reserved
-    </footer>
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2 class="section-title">Project Gallery</h2>
+    <p class="section-subtitle">A few glimpses of the spaces crafted by BUILDCRAFT ENTERPRISES.</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="vanity-bathroom.jpg" alt="Vanity and wash basin design">
+        <div class="gallery-caption">Bathroom Vanity & Storage</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="master-bedroom.jpg" alt="Master bedroom interior design">
+        <div class="gallery-caption">Master Bedroom Design</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="blue-sofa.jpg" alt="Custom teal corner sofa">
+        <div class="gallery-caption">Custom Corner Sofa – Teal</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="brown-sofa.jpg" alt="Brown sofa in workshop">
+        <div class="gallery-caption">Custom Sofa – Production</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="living-room.jpg" alt="Living room design with brown sofa">
+        <div class="gallery-caption">Living Room & TV Area</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="vanity-partition.jpg" alt="Partition with vanity design">
+        <div class="gallery-caption">Entrance Partition & Vanity</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="kids-bedroom.jpg" alt="Kids bedroom interior">
+        <div class="gallery-caption">Kids Bedroom Design</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="corner-sofa-white.jpg" alt="White corner sofa">
+        <div class="gallery-caption">Custom Corner Sofa – White</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact & Studio Location</h2>
+    <p class="section-subtitle">Share your floor plan or requirements – we’ll help you design a functional and beautiful home.</p>
+
+    <div class="contact-wrapper">
+      <!-- Left: Address & Info -->
+      <div class="contact-card">
+        <p><strong>Studio Name:</strong> BUILDCRAFT ENTERPRISES</p>
+        <p><strong>Studio Address:</strong><br>
+          Office No. 203, Konark Indrau Mall,<br>
+          Pune 411048, Maharashtra
+        </p>
+        <p><strong>Phone / WhatsApp:</strong>
+          <a href="https://wa.me/919673237661" target="_blank">+91 96732 37661</a>
+        </p>
+        <p><strong>Email:</strong>
+          <a href="mailto:shaikhfaizan000@gmail.com">shaikhfaizan000@gmail.com</a>
+        </p>
+        <p><strong>City:</strong> Pune, Maharashtra</p>
+      </div>
+
+      <!-- Right: Inquiry Form (front-end only) -->
+      <div class="contact-card contact-form">
+        <input type="text" placeholder="Your Name *">
+        <input type="email" placeholder="Email *">
+        <input type="text" placeholder="Phone Number *">
+        <textarea placeholder="Your Message / Project Details *"></textarea>
+        <button class="btn-primary">Send Inquiry</button>
+        <p class="note">
+          For pricing details and quotations, please fill the inquiry form or contact us on WhatsApp.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="whatsapp-float" href="https://wa.me/919673237661" target="_blank" aria-label="Chat on WhatsApp">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp">
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 BUILDCRAFT ENTERPRISES • All Rights Reserved
+  </footer>
 
 </body>
+
 </html>
