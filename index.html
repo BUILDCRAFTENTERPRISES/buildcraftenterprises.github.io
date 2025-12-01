@@ -1,185 +1,874 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buildcraft Enterprises</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUILDCRAFT ENTERPRISES | Interior Design & Custom Sofas in Pune</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
+  <!-- Basic SEO -->
+  <meta name="description" content="Buildcraft Enterprises - Interior designing, modular kitchens, wardrobes, custom sofas, TV units, false ceilings and complete renovation work in Pune." />
+  <meta name="keywords" content="interior designer pune, custom sofa pune, modular kitchen pune, wardrobes, living room design, kids bedroom design, renovation work" />
+  <meta name="author" content="BUILDCRAFT ENTERPRISES" />
 
-        /* Header */
-        .header {
-            background: linear-gradient(90deg, #ff4f81, #6a5acd);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+  <style>
+    :root {
+      --primary: #ff6b6b;
+      --secondary: #4e89ff;
+      --accent: #ffcc00;
+      --dark: #222;
+      --light: #f7f7f7;
+      --bg: #f3f5f9;
+    }
 
-        /* Navigation */
-        .nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
 
-        /* Sections */
-        section {
-            padding: 50px 10%;
-        }
+    body {
+      background: var(--bg);
+      color: #333;
+      line-height: 1.6;
+    }
 
-        h2 {
-            font-size: 26px;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-        }
-        .service-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            font-weight: bold;
-        }
+    /* Header / Nav */
+    header {
+      background: radial-gradient(circle at top left, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 16px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        /* Gallery */
-        .gallery img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-        /* Contact Card */
-        .contact-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            width: 60%;
-            margin: auto;
-        }
-        .contact-card a {
-            color: blue;
-            text-decoration: underline;
-        }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
 
-        /* WhatsApp Button */
-        .wa-btn {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-size: 18px;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-    </style>
+    nav a {
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 8% 40px;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+      animation: fadeInUp 0.7s ease forwards;
+      opacity: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 span {
+      color: var(--primary);
+    }
+
+    .hero-text p {
+      margin-bottom: 18px;
+      max-width: 520px;
+      color: #555;
+    }
+
+    .tags {
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      margin: 4px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      font-size: 0.95rem;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--dark);
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.1);
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .hero-images {
+      flex: 1 1 320px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 0.15s;
+      opacity: 0;
+    }
+
+    .hero-card {
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      min-height: 140px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      background: #ddd center/cover no-repeat;
+    }
+
+    .hero-card span {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
+
+    .section-title p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* About */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      flex: 2 1 320px;
+    }
+
+    .about-highlight {
+      background: #fff;
+      border-left: 4px solid var(--secondary);
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 15px 0;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .about-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      background: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      min-width: 140px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+      font-size: 0.85rem;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid rgba(0,0,0,0.03);
+    }
+
+    .service-card h3 {
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .service-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--accent);
+      color: #000;
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+
+    /* Gallery / Portfolio */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+      background: #ccc center/cover no-repeat;
+      min-height: 180px;
+      position: relative;
+    }
+
+    .gallery-item span {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .testimonial-name {
+      margin-top: 10px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .stars {
+      color: #ffb400;
+      margin-bottom: 6px;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+      gap: 26px;
+    }
+
+    .contact-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      font-size: 0.95rem;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin-bottom: 6px;
+    }
+
+    .contact-card a {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* Form */
+    .contact-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      font-size: 0.9rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      margin-top: 10px;
+      background: var(--secondary);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .contact-form small {
+      display: block;
+      margin-top: 6px;
+      color: #777;
+      font-size: 0.8rem;
+    }
+
+    .map-wrapper {
+      margin-top: 18px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
+    }
+
+    /* Floating buttons */
+    .floating-buttons {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .float-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 22px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .float-wa {
+      background: #25d366;
+    }
+
+    .float-call {
+      background: #007bff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 16px 10px;
+      background: #111;
+      color: #eee;
+      font-size: 0.85rem;
+      margin-top: 30px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(16px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        padding-top: 30px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 30px 6% 20px;
+      }
+
+      section {
+        padding: 30px 6%;
+      }
+
+      .hero-text h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- Header -->
-    <div class="header">
-        BUIL CRAFT ENTERPRISES
+<header>
+  <div class="logo">BUILDCRAFT ENTERPRISES</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Colourful & Modern <span>Interior Designs</span> for Stylish Homes.</h1>
+    <p>
+      BUILDCRAFT ENTERPRISES transforms spaces with creative interior design, custom furniture
+      and functional layouts tailored for modern living in Pune.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Interior Design</span>
+      <span class="tag">Custom Sofas</span>
+      <span class="tag">Modular Kitchens</span>
+      <span class="tag">Kids & Master Bedrooms</span>
     </div>
 
-    <!-- Navigation -->
-    <div class="nav">
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+    <div class="hero-buttons">
+      <a href="https://wa.me/919673237661" target="_blank" class="btn-primary">Chat on WhatsApp</a>
+      <a href="#contact" class="btn-secondary">Send Inquiry for Pricing</a>
     </div>
 
-    <!-- Services -->
-    <section id="services">
-        <h2>Our Services</h2>
+    <p class="hero-note">
+      Studio at Office no 203, Konark Indrau Mall, Pune 411048.  
+      For detailed designs & pricing, please fill the enquiry form below.
+    </p>
+  </div>
 
-        <div class="services-grid">
-            <div class="service-box">Interior Designing</div>
-            <div class="service-box">Modular Kitchens</div>
-            <div class="service-box">Wardrobe & Bedroom Design</div>
-            <div class="service-box">Custom Sofa Manufacturing</div>
-            <div class="service-box">Living Room Design</div>
-            <div class="service-box">Kids Bedroom Design</div>
-            <div class="service-box">TV Unit Design</div>
-            <div class="service-box">False Ceiling</div>
-            <div class="service-box">Renovation Work</div>
+  <div class="hero-images">
+    <div class="hero-card" style="background-image:url('images/gallery1.jpg');">
+      <span>Vanity & Wash Area</span>
+    </div>
+    <div class="hero-card" style="background-image:url('images/gallery2.jpg');">
+      <span>Master Bedroom</span>
+    </div>
+    <div class="hero-card" style="background-image:url('images/gallery3.jpg');">
+      <span>Custom Sofa</span>
+    </div>
+    <div class="hero-card" style="background-image:url('images/gallery4.jpg');">
+      <span>Living Room Design</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title">
+    <h2>About Buildcraft Enterprises</h2>
+    <p>Interior design, modular solutions and custom-made furniture under one roof.</p>
+  </div>
+
+  <div class="about">
+    <div class="about-text">
+      <p>
+        We are a Pune-based interior design studio specialising in colourful, functional and
+        personalised spaces. From planning to execution, we handle everything – designs, materials,
+        carpentry, custom furniture, lighting and finishing.
+      </p>
+
+      <div class="about-highlight">
+        Every project is designed to match your lifestyle, budget and space – whether it’s a compact
+        apartment, a family home, or a complete renovation project.
+      </div>
+
+      <p>
+        Our in-house team builds custom sofas, wardrobes, TV units and modular kitchens, ensuring
+        quality craftsmanship and long-lasting comfort.
+      </p>
+
+      <div class="about-stats">
+        <div class="stat">
+          <strong>End-to-End</strong>
+          Design to Execution
         </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery">
-        <h2>Project Gallery</h2>
-
-        <div class="gallery">
-            <img src="img1.jpg" alt="">
-            <img src="img2.jpg" alt="">
-            <img src="img3.jpg" alt="">
-            <img src="img4.jpg" alt="">
-            <img src="img5.jpg" alt="">
+        <div class="stat">
+          <strong>Custom</strong>
+          Sofa & Furniture
         </div>
-
-        <p style="text-align:center; color:#666;">(Add your real project images as img1.jpg, img2.jpg, etc.)</p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact & Location</h2>
-
-        <div class="contact-card">
-            <h3>Studio Address</h3>
-
-            <p><strong>BUIL CRAFT ENTERPRISES</strong></p>
-
-            <p>
-                Office no 203<br>
-                Konark indrau mall<br>
-                Pune 411048
-            </p>
-
-            <p><strong>Phone / WhatsApp:</strong> 
-                <a href="https://wa.me/919673237661" target="_blank">
-                    +91 96732 37661
-                </a>
-            </p>
-
-            <p><strong>Email:</strong> 
-                <a href="mailto:shaikhfaizan000@gmail.com">
-                    shaikhfaizan000@gmail.com
-                </a>
-            </p>
-
-            <p><strong>City:</strong> Pune, Maharashtra</p>
+        <div class="stat">
+          <strong>Pune</strong>
+          Local Support & Service
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div style="text-align:center;">
-            <a class="wa-btn" href="https://wa.me/919673237661" target="_blank">
-                Chat on WhatsApp
-            </a>
-        </div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-title">
+    <h2>Services We Offer</h2>
+    <p>Complete home and interior solutions by BUILDCRAFT ENTERPRISES.</p>
+  </div>
 
-    </section>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-tag">Planning</span>
+      <h3>Interior Designing</h3>
+      <p>Concepts, 3D designs and space planning tailored to your taste and lifestyle.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Kitchens</span>
+      <h3>Modular Kitchens</h3>
+      <p>Smart, ergonomic kitchen layouts with durable finishes and clever storage.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Bedrooms</span>
+      <h3>Wardrobe & Bedroom Design</h3>
+      <p>Sliding wardrobes, headboards, storage beds and complete bedroom setups.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Furniture</span>
+      <h3>Custom Sofa Manufacturing</h3>
+      <p>Fabric and leatherette sofas made to size with premium cushioning and comfort.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Living Spaces</span>
+      <h3>Living Room Design</h3>
+      <p>TV units, partitions, wall panels and seating layouts for warm, vibrant living rooms.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Kids</span>
+      <h3>Kids Bedroom Design</h3>
+      <p>Colourful, playful and practical kids rooms that grow with your child.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Media</span>
+      <h3>TV Unit Design</h3>
+      <p>Modern TV walls with hidden storage, lighting and cable management.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Ceiling</span>
+      <h3>False Ceiling</h3>
+      <p>POP and gypsum ceilings with lighting designs to enhance the mood of each room.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-tag">Makeover</span>
+      <h3>Renovation Work</h3>
+      <p>Complete home makeovers including demolition, redesign and fresh interiors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-title">
+    <h2>Project Gallery</h2>
+    <p>A glimpse of our recent interior and custom furniture work.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" style="background-image:url('images/gallery1.jpg');">
+      <span>Vanity & Wash Area</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery2.jpg');">
+      <span>Master Bedroom</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery3.jpg');">
+      <span>Custom L-Shaped Sofa</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery4.jpg');">
+      <span>Elegant Living Room</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery5.jpg');">
+      <span>Kids Bedroom</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery6.jpg');">
+      <span>Designer Sofa</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery7.jpg');">
+      <span>Corner Sofa Set</span>
+    </div>
+    <div class="gallery-item" style="background-image:url('images/gallery8.jpg');">
+      <span>Decor & Partition</span>
+    </div>
+  </div>
+
+  <p style="margin-top:10px;font-size:0.85rem;color:#666;text-align:center;">
+    (Upload your actual project photos in the <strong>images</strong> folder as gallery1.jpg, gallery2.jpg, … gallery8.jpg)
+  </p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-title">
+    <h2>What Our Clients Say</h2>
+    <p>Some words from homeowners who trusted BUILDCRAFT ENTERPRISES.</p>
+  </div>
+
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      “Very professional team. They designed our living room and sofa exactly as we imagined. Quality work and good finishing.”
+      <div class="testimonial-name">— Client from Pune</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      “Our modular kitchen and wardrobes were completed on time. Nice colour combinations and very practical layouts.”
+      <div class="testimonial-name">— Family at Kondhwa</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      “Kids bedroom, false ceiling and TV unit all came out amazing. Good coordination and on-site supervision.”
+      <div class="testimonial-name">— Apartment Owner, NIBM Road</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & FORM -->
+<section id="contact">
+  <div class="section-title">
+    <h2>Contact & Location</h2>
+    <p>Reach out for consultations, quotations or site visits.</p>
+  </div>
+
+  <div class="contact-wrapper">
+    <!-- Left: Address -->
+    <div>
+      <div class="contact-card">
+        <h3>Studio Address</h3>
+        <p><strong>BUILDCRAFT ENTERPRISES</strong></p>
+        <p>Office no 203<br>Konark Indrau Mall<br>Pune 411048</p>
+
+        <p><strong>Phone / WhatsApp:</strong>
+          <a href="https://wa.me/919673237661" target="_blank">+91 96732 37661</a>
+        </p>
+
+        <p><strong>Email:</strong>
+          <a href="mailto:shaikhfaizan000@gmail.com">shaikhfaizan000@gmail.com</a>
+        </p>
+
+        <p><strong>City:</strong> Pune, Maharashtra</p>
+
+        <p class="contact-note">
+          For <strong>detailed pricing</strong> and project discussion, please fill the enquiry form on the right
+          or message us on WhatsApp.
+        </p>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps?q=Konark%20Indrayu%20Mall%20Kondhwa%20Pune&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="contact-form">
+      <h3>Enquiry Form</h3>
+      <p style="font-size:0.9rem;color:#555;margin-bottom:6px;">
+        Share your requirements and we will get back with ideas & approximate costing.
+      </p>
+
+      <form action="https://formsubmit.co/shaikhfaizan000@gmail.com" method="POST">
+        <!-- FormSubmit options -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New enquiry from Buildcraft Enterprises website">
+        <input type="hidden" name="_template" value="table">
+
+        <label>Your Name *</label>
+        <input type="text" name="Name" required>
+
+        <label>Email *</label>
+        <input type="email" name="Email" required>
+
+        <label>Phone Number *</label>
+        <input type="text" name="Phone" required>
+
+        <label>Location / Area</label>
+        <input type="text" name="Location" placeholder="Example: Kondhwa, NIBM Road">
+
+        <label>Your Requirements *</label>
+        <textarea name="Message" rows="4" required placeholder="Example: 2BHK full interior, modular kitchen + wardrobes + sofa"></textarea>
+
+        <button type="submit">Send Enquiry</button>
+        <small>You will receive a confirmation mail when the enquiry is sent. We usually respond within 24 hours.</small>
+        <small>For urgent queries, please WhatsApp or call directly.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <a class="float-btn float-wa" href="https://wa.me/919673237661" target="_blank" title="Chat on WhatsApp">💬</a>
+  <a class="float-btn float-call" href="tel:+919673237661" title="Call Now">📞</a>
+</div>
+
+<footer>
+  © 2025 BUILDCRAFT ENTERPRISES · Interior Design & Custom Sofa Manufacturing · Pune
+</footer>
+
+<script>
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      if (targetId && targetId !== "#") {
+        e.preventDefault();
+        document.querySelector(targetId).scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Simple fade-in on scroll for sections
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll("section").forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = "translateY(14px)";
+    observer.observe(sec);
+  });
+</script>
 
 </body>
 </html>
